@@ -26,8 +26,8 @@ void dfs(int i, int j) {
     dfs(i, j - 1);
 }
 
-int hitung_pulau(){
-        int jumlah_pulau = 0;
+int hitung_pulau() {
+    int jumlah_pulau = 0;
 
     for (int i = 0; i < m; ++i) {
         for (int j = 0; j < n; ++j) {
@@ -38,7 +38,7 @@ int hitung_pulau(){
         }
     }
 
-    return jumlah_pulau;
+    return jumlah_pulau;
 }
 
 
