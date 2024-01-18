@@ -43,6 +43,30 @@ int hitung_pulau(){
 
 
 int main(){
+    m = 4;
+    n = 4;
 
+    // Grid contoh
+    int inputGrid[4][4] = {{0, 1, 0, 0}, {1, 1, 1, 1}, {0, 1, 0, 0}, {0, 1, 1, 0}};
+
+    // Salin grid input ke variabel grid global
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            grid[i][j] = inputGrid[i][j];
+        }
+    }
+
+    // Menampilkan grid awal
+    cout << "Grid Awal:" << endl;
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            cout << grid[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    int jumlah_pulau = hitung_pulau();
+
+    cout << "Jumlah Pulau = " << jumlah_pulau << endl;
 return 0;
 }
