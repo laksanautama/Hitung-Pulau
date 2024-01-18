@@ -27,8 +27,20 @@ void dfs(int i, int j) {
 }
 
 int hitung_pulau(){
+        int jumlah_pulau = 0;
 
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if (grid[i][j] == 1) {
+                ++jumlah_pulau;
+                dfs(i, j);
+            }
+        }
+    }
+
+    return jumlah_pulau;
 }
+
 
 int main(){
 
